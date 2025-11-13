@@ -1,0 +1,12 @@
+<button id="btnNoti">Mostrar Notificación</button>
+<script>
+document.getElementById("btnNoti").addEventListener("click", () => {
+  if('Notification' in window){
+    Notification.requestPermission().then(permission => {
+      if(permission === 'granted'){
+        new Notification("¡Hola desde el botón!");
+      }
+    });
+  }
+});
+</script>

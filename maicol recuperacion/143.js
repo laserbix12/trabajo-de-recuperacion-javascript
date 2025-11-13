@@ -1,0 +1,7 @@
+if('Notification' in window){
+  Notification.requestPermission().then(permission => {
+    if(permission === 'granted'){
+      new Notification("Renotify ejemplo", { tag: "renotify", renotify: true });
+    }
+  });
+}
